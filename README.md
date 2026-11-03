@@ -24,14 +24,16 @@ I built this project to demonstrate my skills in test automation as I prepare fo
 
 ## Run locally
 
-1. Install Java 17 or later, Maven, and Chrome.
-2. From the project directory, run:
+1. Install a JDK 17 or later and Chrome. In VS Code, use **Java: Configure Java Runtime** and select that JDK for the project.
+2. From the project directory, run the Maven Wrapper. It downloads the pinned Maven version the first time, so Maven does not need to be installed separately:
 
    ```bash
-   mvn test -Dsurefire.suiteXmlFiles=testNG.xml
+   .\mvnw.cmd test -Dsurefire.suiteXmlFiles=testNG.xml
    ```
 
-Copy `src/test/resources/Testdata/config.properties.example` to `config.properties` for local settings, then set `CURA_USERNAME`, `CURA_PASSWORD`, `CURA_WRONG_USERNAME`, and `CURA_WRONG_PASSWORD` in your environment. Credentials are intentionally excluded from version control. Update `browserName` in your local config to use `chrome`, `edge`, or `firefox` when the matching browser is installed.
+For macOS or Linux, run `./mvnw test -Dsurefire.suiteXmlFiles=testNG.xml`.
+
+Copy `src/test/resources/Testdata/config.properties.example` to `src/test/resources/Testdata/config.properties` for local settings. Set `CURA_USERNAME`, `CURA_PASSWORD`, `CURA_WRONG_USERNAME`, and `CURA_WRONG_PASSWORD` in your environment. Credentials are intentionally excluded from version control. Update `browserName` in your local config to use `chrome`, `edge`, or `firefox` when the matching browser is installed.
 
 Test results and screenshots are written under `target/`. Scenario status and evidence are also written to `src/test/resources/TestSuite/Test Suite.xlsx`.
 
