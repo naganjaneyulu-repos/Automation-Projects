@@ -1,0 +1,17 @@
+# Maven and generated test output
+target/
+test-output/
+
+# Excel lock files created while the workbook is open
+~$*.xlsx
+
+# IDE and operating-system files
+.metadata/
+.settings/
+.classpath
+.project
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+
