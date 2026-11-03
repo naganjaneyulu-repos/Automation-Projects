@@ -31,7 +31,7 @@ I built this project to demonstrate my skills in test automation as I prepare fo
    mvn test -Dsurefire.suiteXmlFiles=testNG.xml
    ```
 
-The demo application credentials are stored in `src/test/resources/Testdata/config.properties`. Update `browserName` there to use `chrome`, `edge`, or `firefox` when the matching browser is installed.
+Copy `src/test/resources/Testdata/config.properties.example` to `config.properties` for local settings, then set `CURA_USERNAME`, `CURA_PASSWORD`, `CURA_WRONG_USERNAME`, and `CURA_WRONG_PASSWORD` in your environment. Credentials are intentionally excluded from version control. Update `browserName` in your local config to use `chrome`, `edge`, or `firefox` when the matching browser is installed.
 
 Test results and screenshots are written under `target/`. Scenario status and evidence are also written to `src/test/resources/TestSuite/Test Suite.xlsx`.
 
