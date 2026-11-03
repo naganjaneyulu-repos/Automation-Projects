@@ -5,6 +5,9 @@ test-output/
 # Excel lock files created while the workbook is open
 ~$*.xlsx
 
+# Local configuration may contain credentials; commit only the example
+src/test/resources/Testdata/config.properties
+
 # IDE and operating-system files
 .metadata/
 .settings/
