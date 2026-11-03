@@ -7,6 +7,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>CURA Healthcare Service</name>
 	<description>Performing end-to-end automation for CURA_Healthcare_Service</description>
+	<properties>
+		<maven.compiler.release>17</maven.compiler.release>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 	<dependencies>
 		<!-- Source:
 		https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
@@ -114,4 +118,17 @@
 
 
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.16.0</version>
+				<configuration>
+					<release>${maven.compiler.release}</release>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
+
